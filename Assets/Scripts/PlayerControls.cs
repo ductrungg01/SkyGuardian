@@ -8,7 +8,7 @@ public class PlayerControls : MonoBehaviour
 {
     [Header("General Setup Settings")]
     [Tooltip("How fast ship moves up and down based upon player input")]
-    [FormerlySerializedAs("speedControl")] [SerializeField] private float controlSpeed = 10f;
+    [FormerlySerializedAs("speedControl")] [SerializeField] private float controlSpeed = 30f;
     [Tooltip("How far player moves horizontally")] [SerializeField] private float xRange = 10f;
     [Tooltip("How far player moves vertically")] [SerializeField] private float yRange = 7f;
 
@@ -76,6 +76,7 @@ public class PlayerControls : MonoBehaviour
     {
         if (Input.GetButton("Fire1"))
         {
+            Debug.Log("Fire");
             SetLasersActive(true);
         }
         else
