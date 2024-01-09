@@ -2,18 +2,26 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerControls : MonoBehaviour
 {
-    [SerializeField] private float speedControl = 10f;
-    [SerializeField] private float xRange = 10f;
-    [SerializeField] private float yRange = 7f;
+    [Header("General Setup Settings")]
+    [Tooltip("How fast ship moves up and down based upon player input")]
+    [FormerlySerializedAs("speedControl")] [SerializeField] private float controlSpeed = 10f;
+    [Tooltip("How far player moves horizontally")] [SerializeField] private float xRange = 10f;
+    [Tooltip("How far player moves vertically")] [SerializeField] private float yRange = 7f;
 
+    [Header("Laser gun array")]
+    [Tooltip("Add all player lasers here")]
     [SerializeField] private GameObject[] lasers;
     private List<ParticleSystem.EmissionModule> emissions = new List<ParticleSystem.EmissionModule>();
     
+    [Header("Screen position based tuning")]
     [SerializeField] float positionPitchFactor = -2f;
     [SerializeField] float controlPitchFactor = -10f;
+    
+    [Header("Player input based tuning")]
     [SerializeField] float positionYawFactor = 2f;
     [SerializeField] float controlRollFactor = -20f;
 
@@ -53,11 +61,11 @@ public class PlayerControls : MonoBehaviour
         xThrow = Input.GetAxis("Horizontal");
         yThrow = Input.GetAxis("Vertical");
 
-        float xOffset = xThrow * Time.deltaTime * speedControl;
+        float xOffset = xThrow * Time.deltaTime * controlSpeed;
         float rawXPos = transform.localPosition.x + xOffset;
         float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
         
-        float yOffset = yThrow * Time.deltaTime * speedControl;
+        float yOffset = yThrow * Time.deltaTime * controlSpeed;
         float rawYPos = transform.localPosition.y + yOffset;
         float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
