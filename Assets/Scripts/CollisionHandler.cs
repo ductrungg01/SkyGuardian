@@ -18,13 +18,13 @@ public class CollisionHandler : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        Debug.Log($"{this.name} --Collide with-- {other.gameObject.name}");
+        //Debug.Log($"{this.name} --Collide with-- {other.gameObject.name}");
         StartCrashSequence();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"{this.name} **Trigger with** {other.gameObject.name}");
+        //Debug.Log($"{this.name} **Trigger with** {other.gameObject.name}");
         StartCrashSequence();
     }
 
