@@ -6,14 +6,24 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private GameObject deathVFX;
+    [SerializeField] private GameObject hitVFX;
     [SerializeField] private Transform parentTransform;
     [SerializeField] private int scorePerHit = 15;
+    [SerializeField] private int hitPoints = 1;
 
     private ScoreBoard scoreBoard;
 
     private void Start()
     {
         scoreBoard = FindObjectOfType<ScoreBoard>();
+
+        AddRigidbody();
+    }
+
+    void AddRigidbody()
+    {
+        Rigidbody rb = gameObject.AddComponent<Rigidbody>();
+        rb.useGravity = false;
     }
 
     private void OnParticleCollision(GameObject other)
@@ -21,11 +31,18 @@ public class Enemy : MonoBehaviour
         //Debug.Log($"{this.name} I'm collide with {other.name}");
         
         ProcessHit();
-        KillEnemy();
+
+        if (hitPoints < 1)
+        {
+            KillEnemy();
+        }
     }
 
     void ProcessHit()
     {
+        hitPoints--;
+        GameObject vfx = Instantiate(hitVFX, transform.position, Quaternion.identity);
+        vfx.transform.parent = parentTransform;
         scoreBoard.IncreaseScore(scorePerHit);
     }
 
