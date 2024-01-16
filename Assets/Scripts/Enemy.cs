@@ -47,7 +47,6 @@ public class Enemy : MonoBehaviour
             gameObject.transform.localScale.x / 3, 
             gameObject.transform.localScale.y / 3,
             gameObject.transform.localScale.z / 3);
-        scoreBoard.IncreaseScore(scorePerHit);
     }
 
     void KillEnemy()
@@ -59,6 +58,7 @@ public class Enemy : MonoBehaviour
             gameObject.transform.localScale.y / 3,
             gameObject.transform.localScale.z / 3);
 
+        scoreBoard.IncreaseScore(scorePerHit);
         Destroy(this.gameObject);
     }
 }
