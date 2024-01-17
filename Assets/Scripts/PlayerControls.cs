@@ -87,7 +87,7 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
-    private void SetLasersActive(bool isActive)
+    public void SetLasersActive(bool isActive)
     {
         for (int i = 0; i < emissions.Count; i++)
         {
