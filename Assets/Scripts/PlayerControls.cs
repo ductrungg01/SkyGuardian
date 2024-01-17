@@ -25,13 +25,16 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] float positionYawFactor = 2f;
     [SerializeField] float controlRollFactor = -20f;
 
+    [Header("SFX")] 
+    [SerializeField] private AudioSource audioSource;
+    
     private float xThrow, yThrow;
 
     private void Start()
     {
         foreach (GameObject laser in lasers)
         {
-            emissions.Add(laser.GetComponent<ParticleSystem>().emission);
+            emissions.Add(laser.GetComponent<ParticleSystem>().emission); 
         }
         
         SetLasersActive(false);
@@ -91,5 +94,15 @@ public class PlayerControls : MonoBehaviour
             ParticleSystem.EmissionModule emissionModule = emissions[i];
             emissionModule.enabled = isActive;
         }
+
+        if (isActive)
+        {
+            audioSource.mute = false;
+        }
+        else
+        {
+            audioSource.mute = true;
+        }
     }
+
 }

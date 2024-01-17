@@ -43,20 +43,14 @@ public class Enemy : MonoBehaviour
         hitPoints--;
         GameObject vfx = Instantiate(hitVFX, transform.position, Quaternion.identity);
         vfx.transform.parent = parentTransform;
-        vfx.transform.localScale = new Vector3(
-            gameObject.transform.localScale.x / 3, 
-            gameObject.transform.localScale.y / 3,
-            gameObject.transform.localScale.z / 3);
+        vfx.transform.localScale = gameObject.transform.localScale;
     }
 
     void KillEnemy()
     {
         GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
         vfx.transform.parent = parentTransform;
-        vfx.transform.localScale = new Vector3(
-            gameObject.transform.localScale.x / 3, 
-            gameObject.transform.localScale.y / 3,
-            gameObject.transform.localScale.z / 3);
+        vfx.transform.localScale = gameObject.transform.localScale;
 
         scoreBoard.IncreaseScore(scorePerHit);
         Destroy(this.gameObject);

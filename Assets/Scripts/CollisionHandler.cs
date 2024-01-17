@@ -8,7 +8,9 @@ public class CollisionHandler : MonoBehaviour
 {
     [SerializeField] private float delayTimeAfterCrash = 1f;
     [SerializeField] private ParticleSystem crashVFX;
-
+    [SerializeField] private AudioSource crashSFX;
+    [SerializeField] private AudioSource shootingSFX;
+    
     private bool _isCrashed = false;
 
     private void Start()
@@ -34,6 +36,8 @@ public class CollisionHandler : MonoBehaviour
 
         this._isCrashed = true;
         crashVFX.Play();
+        crashSFX.Play();
+        shootingSFX.mute = true;
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<PlayerControls>().enabled = false;
         
