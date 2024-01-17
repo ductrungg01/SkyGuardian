@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0447a342-8d04-4a55-ab73-7d2296c6b2e8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy Explosion VFX.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy Explosion VFX.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Hit VFX.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Hit VFX.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Eclipse Enforcer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Eclipse Enforcer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Phantom Fury.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Phantom Fury.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Shadow Striker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Shadow Striker.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Vortex Viper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Vortex Viper.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Laser.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Laser.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nova Prime Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Nova Prime Map.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/venus rising rg SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/venus rising rg SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CollisionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CollisionHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +22,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MusicPlayer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -98,6 +105,7 @@
       <updated>1705436856383</updated>
       <workItem from="1705436872053" duration="543000" />
       <workItem from="1705438065779" duration="120000" />
+      <workItem from="1705446573990" duration="7040000" />
     </task>
     <servers />
   </component>

@@ -262,8 +262,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 17428846}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.136225, y: -0.08422664, z: -0.011236578, w: -0.987027}
-  m_LocalPosition: {x: 100.172775, y: 28.161331, z: 98.0211}
+  m_LocalRotation: {x: 0.10535679, y: -0.038438246, z: -0.0036741525, w: -0.9936846}
+  m_LocalPosition: {x: 105.523224, y: 19.247406, z: 76.44855}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -850,8 +850,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 518575661}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.136225, y: -0.08422664, z: -0.011236578, w: -0.987027}
-  m_LocalPosition: {x: 100.172775, y: 92.06148, z: 98.0211}
+  m_LocalRotation: {x: 0.10535679, y: -0.038438246, z: -0.0036741525, w: -0.9936846}
+  m_LocalPosition: {x: 105.523224, y: 83.14755, z: 76.44855}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1184,8 +1184,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755319957}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.136225, y: -0.08422664, z: -0.011236578, w: -0.987027}
-  m_LocalPosition: {x: 100.172775, y: 74.46149, z: 98.0211}
+  m_LocalRotation: {x: 0.10535679, y: -0.038438246, z: -0.0036741525, w: -0.9936846}
+  m_LocalPosition: {x: 105.523224, y: 65.54756, z: 76.44855}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1370,8 +1370,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 811384806}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.136225, y: -0.08422664, z: -0.011236578, w: -0.987027}
-  m_LocalPosition: {x: 100.172775, y: 64.66148, z: 98.0211}
+  m_LocalRotation: {x: 0.10535679, y: -0.038438246, z: -0.0036741525, w: -0.9936846}
+  m_LocalPosition: {x: 105.523224, y: 55.74756, z: 76.44855}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2147,7 +2147,7 @@ GameObject:
   - component: {fileID: 1831950535}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2171,7 +2171,7 @@ TerrainCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: 7e298c9e63e85db47b947b60f26c0586, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1831950536
 Terrain:
   m_ObjectHideFlags: 0
@@ -2617,6 +2617,10 @@ PrefabInstance:
     - target: {fileID: 6465714746130540836, guid: dd377702f4f3b434195882f5cf739adf, type: 3}
       propertyPath: m_Name
       value: Player Rig
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317195739477777226, guid: dd377702f4f3b434195882f5cf739adf, type: 3}
+      propertyPath: CollisionModule.collidesWithDynamic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7487885413214471308, guid: dd377702f4f3b434195882f5cf739adf, type: 3}
       propertyPath: m_LocalPosition.x
