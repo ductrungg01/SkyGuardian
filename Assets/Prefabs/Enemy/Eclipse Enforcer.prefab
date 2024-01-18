@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1740667413054745714}
   - component: {fileID: 6224725513187698864}
   - component: {fileID: 1518804367391446058}
+  - component: {fileID: 5548992410158246358}
   m_Layer: 0
   m_Name: Eclipse Enforcer
   m_TagString: Enemy
@@ -103,6 +104,19 @@ MonoBehaviour:
   parentTransform: {fileID: 0}
   scorePerHit: 40
   hitPoints: 2
+--- !u!114 &5548992410158246358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136407236765409895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905c6d24ea2dc3c4ca57f2aba7baf8ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeTillDestruct: 5
 --- !u!1 &305317531558753851
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,7 +704,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 9.133547, y: 1.7318363, z: 12.3063965}
+  m_Size: {x: 9.133547, y: 3, z: 12.3063965}
   m_Center: {x: -0.13436198, y: -0.11660659, z: -0.57248783}
 --- !u!1 &2941380087375012502
 GameObject:
