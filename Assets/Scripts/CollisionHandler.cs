@@ -36,6 +36,7 @@ public class CollisionHandler : MonoBehaviour
         this._isCrashed = true;
         crashVFX.Play();
         crashSFX.Play();
+        FindObjectOfType<GameController>().StartGameOver(delayTimeAfterCrash);
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<PlayerControls>().SetLasersActive(false);
         GetComponent<PlayerControls>().enabled = false;
@@ -45,7 +46,6 @@ public class CollisionHandler : MonoBehaviour
 
     void ReloadLevel()
     {
-        int currSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currSceneIndex);
+        FindObjectOfType<GameController>().ReloadLevel();
     }
 }

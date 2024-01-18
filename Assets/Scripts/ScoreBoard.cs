@@ -23,4 +23,9 @@ public class ScoreBoard : MonoBehaviour
         scoreText.text = $"Score: {score.ToString()}";
         //Debug.Log($"Score: {score}");
     }
+
+    public int GetScore()
+    {
+        return this.score;
+    }
 }

@@ -6,14 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0447a342-8d04-4a55-ab73-7d2296c6b2e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SkyGuardian/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SkyGuardian/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Eclipse Enforcer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Eclipse Enforcer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Phantom Fury.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Phantom Fury.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Shadow Striker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Shadow Striker.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Vortex Viper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Vortex Viper.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Terrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/New Terrain.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Nova Prime Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Nova Prime Map.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Self Destruct.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Self Destruct.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Timeline/Master Timeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timeline/Master Timeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CollisionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CollisionHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreBoard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreBoard.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +102,7 @@
       <workItem from="1705438065779" duration="120000" />
       <workItem from="1705446573990" duration="7040000" />
       <workItem from="1705581069565" duration="1263000" />
+      <workItem from="1705587464409" duration="1255000" />
     </task>
     <servers />
   </component>
