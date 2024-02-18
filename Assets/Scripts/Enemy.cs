@@ -10,13 +10,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Transform parentTransform;
     [SerializeField] private int scorePerHit = 15;
     [SerializeField] private int hitPoints = 1;
-
-    private ScoreBoard scoreBoard;
-
     private void Start()
     {
-        scoreBoard = FindObjectOfType<ScoreBoard>();
-
         AddRigidbody();
     }
 
@@ -28,8 +23,6 @@ public class Enemy : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        //Debug.Log($"{this.name} I'm collide with {other.name}");
-        
         ProcessHit();
 
         if (hitPoints < 1)
@@ -52,7 +45,7 @@ public class Enemy : MonoBehaviour
         vfx.transform.parent = parentTransform;
         vfx.transform.localScale = gameObject.transform.localScale;
 
-        scoreBoard.IncreaseScore(scorePerHit);
+        ScoreBoard.Instance.IncreaseScore(scorePerHit);
         Destroy(this.gameObject);
     }
 }

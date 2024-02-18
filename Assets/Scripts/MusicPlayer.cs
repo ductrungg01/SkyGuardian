@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour
 {
+    private static MusicPlayer instance;
+    private MusicPlayer() { }
+    public static MusicPlayer Instance
+    {
+        get { return instance; }
+    }
     [SerializeField] private List<AudioClip> backgroundMusics = new List<AudioClip>();
     
     void Awake() 
     {
-        int numMusicPlayers = FindObjectsOfType<MusicPlayer>().Length;
-        if (numMusicPlayers > 1)
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else
         {
             Destroy(gameObject);
+            return;
         }
-        else
-        {
-            SetBackgroundMusic();
-            DontDestroyOnLoad(gameObject);
-            gameObject.GetComponent<AudioSource>().Play();
-        }
+
+        SetBackgroundMusic();
+        gameObject.GetComponent<AudioSource>().Play();
     }
 
     private void SetBackgroundMusic()

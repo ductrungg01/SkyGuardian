@@ -19,13 +19,11 @@ public class CollisionHandler : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        //Debug.Log($"{this.name} --Collide with-- {other.gameObject.name}");
         StartCrashSequence();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log($"{this.name} **Trigger with** {other.gameObject.name}");
         StartCrashSequence();
     }
 
@@ -36,7 +34,7 @@ public class CollisionHandler : MonoBehaviour
         this._isCrashed = true;
         crashVFX.Play();
         crashSFX.Play();
-        FindObjectOfType<GameController>().StartGameOver(delayTimeAfterCrash);
+        GameController.Instance.StartGameOver(delayTimeAfterCrash);
         GetComponent<MeshRenderer>().enabled = false;
         GetComponent<PlayerControls>().SetLasersActive(false);
         GetComponent<PlayerControls>().enabled = false;
@@ -46,6 +44,6 @@ public class CollisionHandler : MonoBehaviour
 
     void ReloadLevel()
     {
-        FindObjectOfType<GameController>().ReloadLevel();
+        GameController.Instance.ReloadLevel();
     }
 }

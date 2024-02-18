@@ -10,6 +10,27 @@ public class ScoreBoard : MonoBehaviour
 
     private TMP_Text scoreText;
 
+    #region Singleton
+    private static ScoreBoard instance;
+    private ScoreBoard() { }
+    public static ScoreBoard Instance
+    {
+        get { return instance; }
+    }
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else
+        {
+            Destroy(gameObject);
+        }
+    }
+    #endregion
+
     private void Start()
     {
         scoreText = GetComponent<TMP_Text>();
@@ -20,8 +41,7 @@ public class ScoreBoard : MonoBehaviour
     {
         score += amountToIncrease;
 
-        scoreText.text = $"Score: {score.ToString()}";
-        //Debug.Log($"Score: {score}");
+        scoreText.text = $"Score: {score}";
     }
 
     public int GetScore()

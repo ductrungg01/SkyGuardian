@@ -9,9 +9,9 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    [Header("UI")] 
-    [SerializeField] private GameObject ScoreBoard;
-    
+    [Header("UI")]
+    [SerializeField] private GameObject scoreBoardGO;
+
     [SerializeField] private GameObject GameOverTitle;
     [SerializeField] private GameObject SuccessfulTitle;
     [SerializeField] private GameObject ReplayButton;
@@ -26,12 +26,36 @@ public class GameController : MonoBehaviour
 
     private double levelTime = 0;
 
+    #region Singleton
+    private static GameController instance = null;
+    private GameController() { }
+
+    public static GameController Instance
+    {
+        get
+        {
+            return instance;
+        }
+    }
+    #endregion
+
+
     private void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         GameOverTitle.SetActive(false);
         YourPoint.SetActive(false);
         ReloadLevelIn.SetActive(false);
-        ScoreBoard.SetActive(true);
+        scoreBoardGO.SetActive(true);
     }
 
     private void Start()
@@ -46,10 +70,10 @@ public class GameController : MonoBehaviour
         
         GameOverTitle.SetActive(true);
         YourPoint.SetActive(true);
-        YourPoint.GetComponent<TMP_Text>().text = "Your point: " + FindObjectOfType<ScoreBoard>().GetScore().ToString();
+        YourPoint.GetComponent<TMP_Text>().text = "Your point: " + ScoreBoard.Instance.GetScore().ToString();
 
         ReloadLevelIn.SetActive(true);
-        ScoreBoard.SetActive(false);
+        scoreBoardGO.SetActive(false);
     }
 
     private void Update()
@@ -77,7 +101,7 @@ public class GameController : MonoBehaviour
     {
         SuccessfulTitle.SetActive(true);
         YourPoint.SetActive(true);
-        YourPoint.GetComponent<TMP_Text>().text = "Your point: " + FindObjectOfType<ScoreBoard>().GetScore().ToString();
+        YourPoint.GetComponent<TMP_Text>().text = "Your point: " + ScoreBoard.Instance.GetScore().ToString();
         
         ReplayButton.SetActive(true);
         ReplayButton.GetComponent<Button>().onClick.AddListener(ReloadLevel);
